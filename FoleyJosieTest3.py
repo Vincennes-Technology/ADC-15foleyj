@@ -66,12 +66,15 @@ if __name__ == "__main__":
         while True:
                 print "ADC[0]: {}\t ADC[1]: {}".format(getADC(0), getADC(1))
                 
-                Output_String = "ADC[0]: %.3f \t ADC[1]: %.3f" %(getADC(0), getADC(1))
+                Output_String = "ADC[0]: %.3f \nADC[1]: %.3f" %(getADC(0), getADC(1))
+                diffnum = "Differencial:"
 
                 time.sleep(1)
                 lcd.message(Output_String)
+                time.sleep(3)
+                lcd.clear()
+                lcd.message(diffnum)
                 time.sleep(2)
                 lcd.clear()
-                continue
-diff = ((getADC(1)-(getADC(0))
-lcd.message("Diff is: "+diff)
+                
+                continue;
